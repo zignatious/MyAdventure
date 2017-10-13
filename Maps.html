@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Playfair+Display|Dancing+Script">
+<style>
+
+body {
+font-family: 'Dancing Script', serif;
+				background-color:Lightpink;
+				 h2{
+				text-align:left;
+				color:orange;
+				font-family: 'Dancing Script', serif;
+			}
+			}
+
+			 h1{
+				text-align:center;
+				color:orange;
+			}
+			p{ 
+				font-family: 'Playfair Display', serif;
+							text-align:left;
+				color:black;
+		}
+		
+		
+		}
+			div {
+  transition: background-color 0.7s ease;
+  background-color: gray;
+}
+h1 {
+	color : blue;
+	font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+
+<h1>My First Google Map</h1>
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+	//first map
+	var mapCenter = new google.maps.LatLng(34.1161,-118.1503);
+	var mapProp= {
+		center:mapCenter,
+		zoom:4,
+		 mapTypeId:google.maps.MapTypeId.HYBRID
+		};
+	
+		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		
+		var Rome = new google.maps.LatLng(41.9028,12.4964);
+		var sydney = new google.maps.LatLng(-33.8688, 151.2093);
+		var russia = new google.maps.LatLng(61.5240, 105.3188);
+		var RomeMarker = new google.maps.Marker({position: Rome, icon:'marker_face.png'});
+	
+		RomeMarker.setMap(map);
+	
+		var myTrip = [Rome, sydney,russia];
+	var flightPath = new google.maps.Polyline({
+	  path:myTrip,
+	  strokeColor:"#fcfc02",
+	  strokeOpacity:0.8,
+	  strokeWeight:2
+	});
+
+	flightPath.setMap(map);
+
+
+	var mapCenter = new google.maps.LatLng(41.8790, 12.4924);
+	var mapProp= {
+	   center:mapCenter,
+	   zoom:18,
+	   	 mapTypeId:google.maps.MapTypeId.HYBRID
+	};
+
+	var mapRome=new google.maps.Map(document.getElementById("RomeMap"),mapProp);
+	
+	var mapCenter = new google.maps.LatLng(41.9028,12.4964);
+	var mapProp= {
+	   center:mapCenter,
+	   zoom:15,
+	};
+
+	var mapRome2=new google.maps.Map(document.getElementById("RomeMap2"),mapProp);
+	
+	//second map
+	var mapCenter = new google.maps.LatLng(-33.8688, 151.2093);
+	var mapProp= {
+	   center:mapCenter,
+	   zoom:18,
+	   mapTypeId:google.maps.MapTypeId.HYBRID
+	};
+
+	var mapsydney=new google.maps.Map(document.getElementById("sydneyMap"),mapProp);
+
+	var mapCenter = new google.maps.LatLng(-33.8688, 151.2093);
+	var mapProp= {
+	   center:mapCenter,
+	   zoom:15,
+	};
+
+	var mapsydney2=new google.maps.Map(document.getElementById("sydneyMap2"),mapProp);
+	
+	
+	
+		//third map
+	var mapCenter = new google.maps.LatLng(55.7558, 37.6173);
+	var mapProp= {
+	   center:mapCenter,
+	   zoom:15,
+	};
+
+	var russiaMap=new google.maps.Map(document.getElementById("russiaMap"),mapProp);
+
+	var mapCenter = new google.maps.LatLng(55.7520, 37.6175);
+	var mapProp= {
+	   center:mapCenter,
+	   zoom:16,
+	   mapTypeId:google.maps.MapTypeId.HYBRID
+	};
+
+	var russiaMap2=new google.maps.Map(document.getElementById("russiaMap2"),mapProp);
+
+
+}
+
+</script>
+<h2> Rome <h2>
+<div id="Text1">
+     	<p style="color:black" ;>
+				
+					<font size="3">
+					<div id="Map2">
+				
+					</div>
+					</div>
+					<p> Rome.... Rome is one of the most amazing and beautiful 
+					<br> places in the world, I personally think this because
+					<br> of my personal experience there and joy every 
+					<br> time I go. Although my opinion myy be biased 
+					<br> because of the lack of experience I have elsewhere. 
+					
+							</p>
+					 		</font>
+
+
+<div id="RomeMap" style="width:400px;height:400px;float:left"></div>
+
+<div id="RomeMap2" style="width:400px;height:400px;float:left"></div>
+<div style="clear:both;"></div>
+<img src="Roma.jpg" alt="Roma.jpg" width="400px"	lenght="400px" >
+
+<font size="3">
+
+
+
+
+
+
+
+ <h2>Sydney<h2>
+  <div id="Text1">
+     	<p style="color:black" ;>
+				
+					<font size="3">
+					<div id="Map2">
+					</div>
+ <p> Overall Sydney looks like a very beautiful and fun place to be.
+ <br> In addition weather, environment and agriculture are incredible,
+ <br>if and when I go to Sydney I hope to explore most of the city and 
+ <br> walk everywhere! When I travle to different places around the world
+ <br>I LOVE to walk everywhere and explore. </p>
+					 	
+</font>
+
+<div id="sydneyMap" style="width:400px;height:400px;float:left"></div>
+<div id="sydneyMap2" style="width:400px;height:400px;float:left"></div>
+<div style="clear:both;"></div>
+<img src="sydney.jpeg" alt="Sydney.jpeg"  width="400px"	lenght="400px" >
+
+<font size="3">
+
+<h2>Moscow,Russia <h2>
+  <div id="Text1">
+     	<p style="color:black" ;>
+				
+					<font size="3">
+					<div id="Map3">
+					</div>
+					
+
+ <p> I've heard that Russia is a fun but cold place to be.
+ <br> They have great food, awesome entertainment, and cold weather,
+ <br> which I love. At somepoint in my highschool, collage career
+ <br> plus at certain times of the year its insanely beautiful.
+ 
+ 
+ </p>
+					 	
+</font>
+
+<div id="russiaMap2" style="width:400px;height:400px;float:left"></div>
+<div id="russiaMap" style="width:400px;height:400px;float:left"></div>
+<div style="clear:both;"></div>
+
+<img src="russia.jpg" alt="russia.jpg"  width="400px"	lenght="400px" >
+
+
+<font size="3">
+<br>
+<br>
+<br>
+<br>
+
+ <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>
+http://www.nationalgeographic.com/content/dam/travel/Guide-Pages/europe/russia/russia.jpg
+<br>http://www.nationalgeographic.com/content/dam/travel/Guide-Pages/europe/rome-travel.jpg
+<br>http://www.nationalgeographic.com/content/dam/travel/Guide-Pages/europe/russia/russia.jpg
+					 		
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlqoH_Uiyhs8QKxqjg7MMq9jJHekbv8U8&callback=myMap"></script>
+
+</body>
+</html>
